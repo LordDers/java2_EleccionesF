@@ -1,8 +1,8 @@
-import java.io.BufferedWriter;
+//import java.io.BufferedWriter;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.FileReader;
-import java.io.FileWriter;
+//import java.io.FileWriter;
 
 import java.util.ArrayList;
 
@@ -210,15 +210,25 @@ public class Elecciones
 		{
 			BufferedReader br = new BufferedReader(new FileReader("listadosPartidos.txt"));
 
-			ArrayList <String> Partido = new ArrayList <String> ();
+			ArrayList <String> partidos = new ArrayList <String> ();
 
 			String linea = br.readLine();
 			while(linea != null)
 			{
-				System.out.println(linea);
-				Partido.add(linea);
+				//System.out.println(linea);
+				partidos.add(linea);
 				linea = br.readLine();
 			}
+
+			for(int i=0; i<partidos.size(); i++)
+			{
+				System.out.println(partidos.get(i));
+			}
+
+			// Vaciar el ArrayList
+			partidos.clear();
+			// Comprobamos que se haya vaciado
+			System.out.println("\nVaciado correctamente. (" + partidos.size() + ")");
 			
 		}catch(IOException e)
 		{
