@@ -1,3 +1,11 @@
+import java.io.BufferedWriter;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.FileReader;
+import java.io.FileWriter;
+
+import java.util.ArrayList;
+
 import java.util.Scanner;
 
 public class Elecciones
@@ -193,6 +201,28 @@ public class Elecciones
 		{
 			System.out.println("NO Gobierna");
 			String n = "No Gobierna";
+		}
+
+		System.out.println("\n\n Partidos");
+
+		// Leyendo el archivo listadosPartidos.txt
+		try
+		{
+			BufferedReader br = new BufferedReader(new FileReader("listadosPartidos.txt"));
+
+			ArrayList <String> Partido = new ArrayList <String> ();
+
+			String linea = br.readLine();
+			while(linea != null)
+			{
+				System.out.println(linea);
+				Partido.add(linea);
+				linea = br.readLine();
+			}
+			
+		}catch(IOException e)
+		{
+			System.out.println("Error E/S: "+e);
 		}
 	}
 }
