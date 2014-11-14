@@ -7,17 +7,19 @@ public class Partido
 	private int v_votos;
 	private boolean v_gobierno; // Si - No
 
-	/*public Partido (String nombre, String presidente, int numero, String tipo, int votos)
+	/*public Partido (String nombre, String presidente, int numero, String tipo, int votos, boolean gobierno)
 	{
 		this.v_nombre = nombre;
 		this.v_presidente = presidente;
 		this.v_numero = numero;
 		this.v_tipo = tipo;
 		this.v_votos = votos;
+		this.v_gobierno = gobierno;
 	}*/
 
 	public void setNombre (String nombre)
 	{
+		//nombre = "aa";
 		this.v_nombre = nombre;
 	}
 

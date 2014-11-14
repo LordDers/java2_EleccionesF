@@ -1,6 +1,5 @@
-uno
-dos
-tres
-cuatro
-cinco
-seis
+uno, aa, 16, izq, 26, false
+dos, ss, 26, der, 36, false
+tres, dd, 36, izq, 46, false
+cuatro, ff, 46, der, 56, false
+cinco, gg, 56, izq, 66, true

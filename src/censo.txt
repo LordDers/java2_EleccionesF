@@ -1,0 +1,6 @@
+12345678A, Matias, Li, 21, Noruego, 15/06/1993, H, 123456789
+98765432B, Juan, Hernandez, 35, Espanyol, 11/11/1979, H, 159753842
+45678123L, Elena, Ning, 18, Argentina, 14/07/1996, M, 548622279
+72438699R, Raquel, Castro, 16, Italiana, 28/02/1998, M, 267882666
+14785236J, Pepe, Rodriguez, 17, Ruso, 14/12/1997, H, 147968553
+25079639T, Sandra, Perez, 42, Australiana, 10/10/1972, M, 128740026
