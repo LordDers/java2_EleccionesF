@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 import java.util.Scanner;
 
-public class Elecciones
+public class Elecciones2
 {
 	public static void main (String args[]) 
 	{
@@ -280,16 +280,19 @@ public class Elecciones
 					String linea = br.readLine();
 					while(linea != null)
 					{
-						// Dividir la linea del fichero mediante ", " y obtener dichos datos
+						// 1Dividir la linea del fichero mediante ", " y obtener dichos datos
 						StringTokenizer divString = new StringTokenizer(linea, ", ");
 
-						// Calcular el numero de veces que el metodo nextToken de este tokenizer puede ser llamado
+						// 1Calcular el numero de veces que el metodo nextToken de este tokenizer puede ser llamado
 						int numberOfTokens = divString.countTokens();
 
-						// Guardar en "splitArr" el numero de token
+						// 1Guardar en "splitArr" el numero de token
 						String[] splitArr = new String[numberOfTokens];
 
-						// Devolver el siguiente token 
+						// 2Dividir la linea del fichero mediante ", " y obtener dichos datos
+						//String [] divString = linea.split(", ");
+
+						// 1Devolver el siguiente token 
 						splitArr[0] = divString.nextToken();
 						splitArr[1] = divString.nextToken();
 						splitArr[2] = divString.nextToken();
@@ -301,16 +304,24 @@ public class Elecciones
 						/*Partido part = new Partido(splitArr[0], splitArr[1], Integer.parseInt(splitArr[2]), splitArr[3], Integer.parseInt(splitArr[4]), Boolean.parseBoolean(splitArr[5]));*/
 
 						// Añadir el objeto "part" al ArrayList "partidos"
-						//partidos.add(part);
+						partidos.add(part);
 
 						// Es lo mismo los set que new Partido(...)
-						// Poner los atributos al objeto "part"
+						// 1Poner los atributos al objeto "part"
 						part.setNombre(splitArr[0]);
 						part.setPresidente(splitArr[1]);
 						part.setNumero(Integer.parseInt(splitArr[2]));
 						part.setTipo(splitArr[3]);
 						part.setVotos(Integer.parseInt(splitArr[4]));
 						part.setGobierno(Boolean.parseBoolean(splitArr[5]));
+
+						// 2Poner los atributos al objeto "part"
+						/*part.setNombre(divString[0]);
+						part.setPresidente(divString[1]);
+						part.setNumero(Integer.parseInt(divString[2]));
+						part.setTipo(divString[3]);
+						part.setVotos(Integer.parseInt(divString[4]));
+						part.setGobierno(Boolean.parseBoolean(divString[5]));*/
 
 						// Imprimir datos
 						System.out.println("\nNombre: " + part.getNombre());
@@ -353,24 +364,27 @@ public class Elecciones
 					String lineahabi = br.readLine();
 					while(lineahabi != null)
 					{
-						// Dividir la linea del fichero mediante ", " y obtener dichos datos
-						StringTokenizer divStringhabi = new StringTokenizer(lineahabi, ", ");
+						// 1Dividir la linea del fichero mediante ", " y obtener dichos datos
+						//StringTokenizer divStringhabi = new StringTokenizer(lineahabi, ", ");
 
-						// Calcular el numero de veces que el metodo nextToken de este tokenizer puede ser llamado
-						int numberOfTokens = divStringhabi.countTokens();
+						// 1Calcular el numero de veces que el metodo nextToken de este tokenizer puede ser llamado
+						//int numberOfTokens = divStringhabi.countTokens();
 
-						// Guardar en "splitArr" el numero de token
-						String[] splitArrhabi = new String[numberOfTokens];
+						// 1Guardar en "splitArr" el numero de token
+						//String[] splitArrhabi = new String[numberOfTokens];
 
-						// Devolver el siguiente token 
-						splitArrhabi[0] = divStringhabi.nextToken();
+						// 2Dividir la linea del fichero mediante ", " y obtener dichos datos
+						String [] divString = lineahabi.split(", ");
+
+						// 1Devolver el siguiente token 
+						/*splitArrhabi[0] = divStringhabi.nextToken();
 						splitArrhabi[1] = divStringhabi.nextToken();
 						splitArrhabi[2] = divStringhabi.nextToken();
 						splitArrhabi[3] = divStringhabi.nextToken();
 						splitArrhabi[4] = divStringhabi.nextToken();
 						splitArrhabi[5] = divStringhabi.nextToken();
 						splitArrhabi[6] = divStringhabi.nextToken();
-						splitArrhabi[7] = divStringhabi.nextToken();
+						splitArrhabi[7] = divStringhabi.nextToken();*/
 
 						Habitante habi = new Habitante();
 						/*Habitante habi = new Habitante(splitArrhabi[0], splitArrhabi[1],splitArrhabi[2], Integer.parseInt(splitArrhabi[3]), splitArrhabi[4], splitArrhabi[5], splitArrhabi[6], Integer.parseInt(splitArrhabi[7]));*/
@@ -379,15 +393,25 @@ public class Elecciones
 						habitante.add(habi);
 
 						// Es lo mismo los set que new Partido(...)
-						// Poner los atributos al objeto "part"
-						habi.setDni(splitArrhabi[0]);
+						// 1Poner los atributos al objeto "part"
+						/*habi.setDni(splitArrhabi[0]);
 						habi.setNombre(splitArrhabi[1]);
 						habi.setApellido(splitArrhabi[2]);
 						habi.setEdad(Integer.parseInt(splitArrhabi[3]));
 						habi.setNacionalidad(splitArrhabi[4]);
 						habi.setNacimiento(splitArrhabi[5]);
 						habi.setSexo(splitArrhabi[6]);
-						habi.setTelefono(Integer.parseInt(splitArrhabi[7]));
+						habi.setTelefono(Integer.parseInt(splitArrhabi[7]));*/
+
+						// 2Poner los atributos al objeto "part"
+						habi.setDni(divString[0]);
+						habi.setNombre(divString[1]);
+						habi.setApellido(divString[2]);
+						habi.setEdad(Integer.parseInt(divString[3]));
+						habi.setNacionalidad(divString[4]);
+						habi.setNacimiento(divString[5]);
+						habi.setSexo(divString[6]);
+						habi.setTelefono(Integer.parseInt(divString[7]));
 
 						// Comprobar la edad del habitante
 						if (habi.getEdad() >= 18)
