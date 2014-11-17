@@ -301,7 +301,7 @@ public class Elecciones
 						/*Partido part = new Partido(splitArr[0], splitArr[1], Integer.parseInt(splitArr[2]), splitArr[3], Integer.parseInt(splitArr[4]), Boolean.parseBoolean(splitArr[5]));*/
 
 						// Añadir el objeto "part" al ArrayList "partidos"
-						//partidos.add(part);
+						partidos.add(part);
 
 						// Es lo mismo los set que new Partido(...)
 						// Poner los atributos al objeto "part"
