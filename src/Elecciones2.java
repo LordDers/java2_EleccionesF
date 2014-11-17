@@ -293,12 +293,18 @@ public class Elecciones2
 						//String [] divString = linea.split(", ");
 
 						// 1Devolver el siguiente token 
-						splitArr[0] = divString.nextToken();
+						/*splitArr[0] = divString.nextToken();
 						splitArr[1] = divString.nextToken();
 						splitArr[2] = divString.nextToken();
 						splitArr[3] = divString.nextToken();
 						splitArr[4] = divString.nextToken();
-						splitArr[5] = divString.nextToken();
+						splitArr[5] = divString.nextToken();*/
+
+						// 1.1Lo mismo que splitArr[0] = divString.nextToken(); splitArr[1]...
+						for (int i=0; i<numberOfTokens; i++)
+						{
+							splitArr[i] = divString.nextToken();
+						}
 
 						Partido part = new Partido();
 						/*Partido part = new Partido(splitArr[0], splitArr[1], Integer.parseInt(splitArr[2]), splitArr[3], Integer.parseInt(splitArr[4]), Boolean.parseBoolean(splitArr[5]));*/
@@ -385,6 +391,12 @@ public class Elecciones2
 						splitArrhabi[5] = divStringhabi.nextToken();
 						splitArrhabi[6] = divStringhabi.nextToken();
 						splitArrhabi[7] = divStringhabi.nextToken();*/
+
+						// 1.1Lo mismo que splitArrhabi[0] = divStringhabi.nextToken(); splitArrhabi[1]...
+						/*for (int i=0; i<numberOfTokens; i++)
+						{
+							splitArrhabi[i] = divStringhabi.nextToken();
+						}*/
 
 						Habitante habi = new Habitante();
 						/*Habitante habi = new Habitante(splitArrhabi[0], splitArrhabi[1],splitArrhabi[2], Integer.parseInt(splitArrhabi[3]), splitArrhabi[4], splitArrhabi[5], splitArrhabi[6], Integer.parseInt(splitArrhabi[7]));*/
